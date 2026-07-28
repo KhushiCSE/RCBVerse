@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-rcb-black text-rcb-white font-sans antialiased;
+    background-color: #08080A;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 50% -5%, rgba(236, 12, 22, 0.06), transparent 60%),
+      linear-gradient(180deg, #08080A 0%, #0A0A0D 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Clean sharp panels — no heavy blur glow */
+  .glass-panel {
+    @apply rounded-2xl;
+    background-color: #121216;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-panel-strong {
+    @apply rounded-2xl;
+    background-color: #0E0E12;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Vibrant gradient highlight for key headline terms */
+  .text-gradient-gold-red {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #FF1E27 0%, #D1040A 100%);
+  }
+
+  .text-gradient-cyan {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #00E5FF 0%, #00B8CC 100%);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #FFD23F 0%, #FFF0A0 50%, #FFD23F 100%);
+  }
+
+  /* Pill-shaped high-contrast buttons */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white
+           transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    background: #EC0C16;
+  }
+  .btn-primary:hover {
+    background: #FF1E27;
+    box-shadow: 0 6px 24px rgba(236, 12, 22, 0.4);
+  }
+
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-rcb-black
+           transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    background: #FFD23F;
+  }
+  .btn-gold:hover {
+    background: #FFE070;
+    box-shadow: 0 6px 24px rgba(255, 210, 63, 0.35);
+  }
+
+  .btn-cyan {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-rcb-black
+           transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    background: #00E5FF;
+  }
+  .btn-cyan:hover {
+    background: #33EBFF;
+    box-shadow: 0 6px 24px rgba(0, 229, 255, 0.35);
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white
+           transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    background-color: #121216;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .btn-ghost:hover {
+    background-color: #1A1A20;
+    border-color: rgba(0, 229, 255, 0.4);
+  }
+}
+
+@layer utilities {
+  .text-glow-red {
+    text-shadow: none;
+  }
+
+  .text-glow-gold {
+    text-shadow: none;
+  }
+
+  .text-glow-cyan {
+    text-shadow: none;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
