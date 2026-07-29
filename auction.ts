@@ -1,6 +1,9 @@
-import { PurchasedPlayer, SquadRatings } from './auction';
+// Auction Constants
+export const MAX_SQUAD = 25;
+export const MAX_OVERSEAS = 8;
+export const MIN_SQUAD = 18;
+export const INITIAL_PURSE = 100;
 
-// Added ROLE_CONFIG export required by PlayingXI.tsx and AuctionSimulator.tsx
 export const ROLE_CONFIG = {
   BAT: { min: 3, max: 6, label: 'Batters' },
   BOWL: { min: 3, max: 6, label: 'Bowlers' },
@@ -8,6 +11,37 @@ export const ROLE_CONFIG = {
   WK: { min: 1, max: 3, label: 'Wicket Keepers' },
 };
 
+// Types & Interfaces
+export interface Player {
+  id: string;
+  name: string;
+  role: 'BAT' | 'BOWL' | 'AR' | 'WK';
+  gender?: 'M' | 'F';
+  basePrice: number;
+  batting: number;
+  bowling: number;
+  fielding?: number;
+  chemistry: number;
+  death: number;
+  spin: number;
+  isOverseas?: boolean;
+  image?: string;
+}
+
+export interface PurchasedPlayer {
+  player: Player;
+  price: number;
+}
+
+export interface SquadRatings {
+  chemistry: number;
+  batting: number;
+  bowling: number;
+  death: number;
+  spin: number;
+}
+
+// Helper Functions
 export function formatCr(amount: number): string {
   return `₹${amount.toFixed(2)} Cr`;
 }
@@ -33,7 +67,7 @@ export function computeRatings(squad: PurchasedPlayer[]): SquadRatings {
     ? batPlayers.reduce((s, p) => s + p.player.batting, 0) / batPlayers.length
     : squad.reduce((s, p) => s + p.player.batting, 0) / squad.length;
 
-  const bowlPlayers = squad.filter((p) => ['BOWL', 'AR'].includes(p.player.role));
+  const bowlPlayers = squad.filter((p) => ['BOWL', 'AR'].includes(p.role));
   const fallback = squad.length > 0
     ? squad.reduce((s, p) => s + p.player.bowling, 0) / squad.length
     : 0;
