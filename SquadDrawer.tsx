@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, RotateCcw, Wallet } from 'lucide-react';
-import type { PurchasedPlayer } from '@/types/auction';
-import { ROLE_CONFIG } from '@/types/auction';
-import { formatCr } from '@/lib/auction';
+import type { PurchasedPlayer } from './auction';
+import type { ROLE_CONFIG } from './auction';
+import type { formatCr } from './auction';
 
 interface SquadDrawerProps {
   open: boolean;

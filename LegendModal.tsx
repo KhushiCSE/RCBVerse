@@ -8,7 +8,7 @@ import {
   Zap,
   Calendar,
 } from 'lucide-react';
-import type { Legend } from '@/data/legends';
+import type { Legend } from './legends';
 
 interface LegendModalProps {
   legend: Legend | null;

@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import type { ModuleId } from '@/types/modules';
-import { Navbar } from './Navbar';
-import { Hero } from './Hero';
-import { AuctionSimulator } from './AuctionSimulator';
-import { PlayingXI } from './PlayingXI';
-import { StadiumExplorer } from './StadiumExplorer';
-import { Timeline } from './Timeline';
-import { LegendsGrid } from './LegendsGrid';
-import { JerseyDesigner } from './JerseyDesigner';
-import { QuizArena } from './QuizArena';
-import { FanPassport } from './FanPassport';
-import { ModulePlaceholder } from './ModulePlaceholder';
+import type { ModuleId } from './modules';
+import type { Navbar } from './Navbar';
+import type { Hero } from './Hero';
+import type { AuctionSimulator } from './AuctionSimulator';
+import type { PlayingXI } from './PlayingXI';
+import type { StadiumExplorer } from './StadiumExplorer';
+import type { Timeline } from './Timeline';
+import type { LegendsGrid } from './LegendsGrid';
+import type { JerseyDesigner } from './JerseyDesigner';
+import type { QuizArena } from './QuizArena';
+import type { FanPassport } from './FanPassport';
+import type { ModulePlaceholder } from './ModulePlaceholder';
 
 function App() {
   const [activeTab, setActiveTab] = useState<ModuleId>('home');

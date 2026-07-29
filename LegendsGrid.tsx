@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { LEGENDS } from '@/data/legends';
-import type { Legend } from '@/data/legends';
-import { LegendModal } from './LegendModal';
+import type { LEGENDS } from './legends';
+import type { Legend } from './legends';
+import type { LegendModal } from './LegendModal';
 
 const ACCENT_HEX: Record<Legend['accent'], string> = {
   red: '#EC0C16',

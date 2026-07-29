@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Crown, Shield } from 'lucide-react';
 import type { ROLE_CONFIG } from './auction';
 import type { Player } from './modules'; 
-import { getInitials } from './playingxi';
+import type { getInitials } from './playingxi';
 
 const ROLE_COLORS: Record<string, string> = {
   BAT: '#FFD23F',

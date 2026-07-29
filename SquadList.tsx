@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import type { Player } from '@/types/auction';
-import { ROLE_CONFIG } from '@/types/auction';
-import { PlayerToken } from './PlayerToken';
+import type { Player } from './auction';
+import type { ROLE_CONFIG } from './auction';
+import type { PlayerToken } from './PlayerToken';
 
 interface SquadListProps {
   availablePlayers: Player[];

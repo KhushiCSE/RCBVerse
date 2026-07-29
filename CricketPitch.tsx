@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { X } from 'lucide-react';
-import type { Player } from '@/types/auction';
-import type { Assignments } from '@/types/playingxi';
-import { PITCH_POSITIONS, POSITION_GROUP_META } from '@/types/playingxi';
-import { PlayerToken } from './PlayerToken';
+import type { Player } from './auction';
+import type { Assignments } from './playingxi';
+import type { PITCH_POSITIONS, POSITION_GROUP_META } from './playingxi';
+import type { PlayerToken } from './PlayerToken';
 
 interface CricketPitchProps {
   assignments: Assignments;

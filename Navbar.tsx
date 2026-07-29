@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Volume2, VolumeX, Wind, Music, PartyPopper, Megaphone, Radio, X } from 'lucide-react';
-import type { ModuleId } from '@/types/modules';
-import { NAV_MODULES } from '@/types/modules';
-import { useAudio } from '@/lib/audioStore';
+import type { ModuleId } from './modules';
+import type { NAV_MODULES } from './modules';
+import type { useAudio } from './audioStore';
 
 interface NavbarProps {
   activeTab: ModuleId;

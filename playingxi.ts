@@ -1,6 +1,6 @@
-import type { Player } from '@/types/auction';
-import type { Assignments, CaptaincyGrade, XIRatings } from '@/types/playingxi';
-import { PLAYERS } from '@/data/players';
+import type { Player } from './auction';
+import type { Assignments, CaptaincyGrade, XIRatings } from './playingxi';
+import type  {PLAYERS } from './players';
 
 function round1(n: number): number {
   return Math.round(n * 10) / 10;

@@ -10,7 +10,7 @@ import {
   soundEngine,
   DEFAULT_AUDIO_SETTINGS,
   type AudioSettings,
-} from '@/lib/soundEngine';
+} from './soundEngine';
 
 interface AudioStoreValue extends AudioSettings {
   setMasterVolume: (v: number) => void;
