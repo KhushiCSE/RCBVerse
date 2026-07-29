@@ -1,4 +1,4 @@
-import type { Player } from './auction';
+import { Player } from './auction';
 
 export const PLAYERS: Player[] = [
   // ── Men's Squad ──

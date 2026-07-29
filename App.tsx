@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { AudioProvider } from './audioStore';
 import { FanProvider } from './fanStore';
-import type { ModuleId } from './modules';
+import { ModuleId } from './modules';
 import { Navbar } from './Navbar';
 import { Hero } from './Hero';
 import { AuctionSimulator } from './AuctionSimulator';

@@ -1,5 +1,5 @@
-import type { Player } from './auction';
-import type { Assignments, CaptaincyGrade, XIRatings } from './playingxi';
+import { Player } from './auction';
+import { Assignments, CaptaincyGrade, XIRatings } from './playingxi';
 import { PLAYERS } from './players'; // FIXED: Removed 'type'
 
 // FIXED: Export PITCH_POSITIONS required by PlayingXI.tsx

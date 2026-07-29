@@ -11,9 +11,9 @@ import {
   Calendar,
   User,
 } from 'lucide-react';
-import type { useFan } from './fanStore';
-import type { PASSPORT_BADGES } from './passport';
-import type { PLAYERS } from './players';
+import { useFan } from './fanStore';
+import { PASSPORT_BADGES } from './passport';
+import { PLAYERS } from './players';
 
 const RED = '#EC0C16';
 const GOLD = '#FFC700';

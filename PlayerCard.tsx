@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { Check, Gavel, Zap } from 'lucide-react';
-import type { Player } from './auction';
-import type { ROLE_CONFIG } from './auction';
-import type { formatCr } from './auction';
+import { Player } from './auction';
+import { ROLE_CONFIG } from './auction';
+import { formatCr } from './auction';
 
 interface PlayerCardProps {
   player: Player;

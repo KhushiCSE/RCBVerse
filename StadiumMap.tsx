@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import type { Stand } from './stands';
-import type { STANDS } from './stands';
+import { Stand } from './stands';
+import { STANDS } from './stands';
 
 interface StadiumMapProps {
   onSelectStand: (stand: Stand) => void;

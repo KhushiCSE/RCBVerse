@@ -1,6 +1,6 @@
 import { Wallet, Users, Globe2, Flag, TrendingDown } from 'lucide-react';
-import type { formatCr } from './auction';
-import type { MAX_SQUAD, MAX_OVERSEAS } from './auction';
+import { formatCr } from './auction';
+import { MAX_SQUAD, MAX_OVERSEAS } from './auction';
 
 interface BudgetBarProps {
   purse: number;

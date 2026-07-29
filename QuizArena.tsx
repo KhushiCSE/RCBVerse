@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Clock, Check, X, RotateCw, Award, Flame } from 'lucide-react';
-import type { QUIZ_TIERS, BADGES } from './quiz';
-import type { QuizTier } from './quiz';
-import type { celebrateGold, celebrateBig, celebrateCorrect } from './confetti';
-import type { useFan } from './fanStore';
+import { QUIZ_TIERS, BADGES } from './quiz';
+import { QuizTier } from './quiz';
+import { celebrateGold, celebrateBig, celebrateCorrect } from './confetti';
+import { useFan } from './fanStore';
 import { useAudio } from './audioStore';
 
 type Phase = 'select' | 'playing' | 'result';

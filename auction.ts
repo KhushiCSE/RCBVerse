@@ -1,4 +1,4 @@
-import type { PurchasedPlayer, SquadRatings } from './auction';
+import { PurchasedPlayer, SquadRatings } from './auction';
 
 // Added ROLE_CONFIG export required by PlayingXI.tsx and AuctionSimulator.tsx
 export const ROLE_CONFIG = {

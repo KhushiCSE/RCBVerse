@@ -11,7 +11,7 @@ import {
   Camera,
   Sparkles,
 } from 'lucide-react';
-import type { Stand } from './stands';
+import { Stand } from './stands';
 
 interface StandModalProps {
   stand: Stand | null;

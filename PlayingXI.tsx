@@ -1,9 +1,9 @@
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Crown, Shield, RotateCcw, Users2 } from 'lucide-react';
-import type { Player } from './auction';
+import { Player } from './auction';
 import { ROLE_CONFIG } from './auction';
-import type { Assignments } from './playingxi';
+import { Assignments } from './playingxi';
 import { PITCH_POSITIONS } from './playingxi';
 import { getDefaultSquad, computeXIRatings, getCaptaincyGrade, getRoleWarnings } from './playingxi';
 import { useAudio } from './audioStore';

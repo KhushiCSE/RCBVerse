@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import type { TIMELINE } from './timeline';
-import type { TimelineMilestone } from './timeline';
+import { TIMELINE } from './timeline';
+import { TimelineMilestone } from './timeline';
 
 const ACCENT_HEX: Record<TimelineMilestone['accent'], string> = {
   red: '#EC0C16',

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import type { ModuleId } from './modules';
+import { ModuleId } from './modules';
 import { MODULES } from './modules';
 
 interface ModulePlaceholderProps {

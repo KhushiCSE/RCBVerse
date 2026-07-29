@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { AlertTriangle } from 'lucide-react';
-import type { XIRatings, CaptaincyGrade } from './playingxi';
-import type { RoleWarning } from './playingxi';
+import { XIRatings, CaptaincyGrade } from './playingxi';
+import { RoleWarning } from './playingxi';
 
 interface RatingWidgetProps {
   ratings: XIRatings;

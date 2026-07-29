@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Hammer, MapPin, Sparkles } from 'lucide-react';
-import type { ModuleId } from './modules';
+import { ModuleId } from './modules';
 import { AnimatedCounter } from './AnimatedCounter';
 
 interface HeroProps {

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, MousePointerClick, Users } from 'lucide-react';
-import type { Stand } from './stands';
-import type { STANDS } from './stands';
-import type { StadiumMap } from './StadiumMap';
-import type { StandModal } from './StandModal';
+import { Stand } from './stands';
+import { STANDS } from './stands';
+import { StadiumMap } from './StadiumMap';
+import { StandModal } from './StandModal';
 
 const STAND_STATS = [
   { icon: <MapPin size={16} />, label: 'Stands', value: '5' },
