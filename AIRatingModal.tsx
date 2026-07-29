@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Brain, Star } from 'lucide-react';
-import type { SquadRatings } from '@/types/auction';
-import { overallScore, getAIComment } from '@/lib/auction';
+import type { SquadRatings } from './auction';
+import type { overallScore, getAIComment } from './auction';
 
 interface AIRatingModalProps {
   open: boolean;

@@ -1,4 +1,4 @@
-import type { PurchasedPlayer, SquadRatings } from '@/types/auction';
+import type { PurchasedPlayer, SquadRatings } from './auction';
 
 export function formatCr(amount: number): string {
   return `₹${amount.toFixed(2)} Cr`;

@@ -1,15 +1,15 @@
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Crown, Shield, RotateCcw, Users2 } from 'lucide-react';
-import type { Player } from '@/types/auction';
-import { ROLE_CONFIG } from '@/types/auction';
-import type { Assignments } from '@/types/playingxi';
-import { PITCH_POSITIONS } from '@/types/playingxi';
-import { getDefaultSquad, computeXIRatings, getCaptaincyGrade, getRoleWarnings } from '@/lib/playingxi';
-import { useAudio } from '@/lib/audioStore';
-import { CricketPitch } from './CricketPitch';
-import { SquadList } from './SquadList';
-import { RatingWidget, WarningsToast } from './RatingWidget';
+import type { Player } from './auction';
+import type { ROLE_CONFIG } from './auction';
+import type { Assignments } from './playingxi';
+import type { PITCH_POSITIONS } from './playingxi';
+import type { getDefaultSquad, computeXIRatings, getCaptaincyGrade, getRoleWarnings } from './playingxi';
+import type { useAudio } from './audioStore';
+import type { CricketPitch } from './CricketPitch';
+import type { SquadList } from './SquadList';
+import type { RatingWidget, WarningsToast } from './RatingWidget';
 
 function emptyAssignments(): Assignments {
   return Object.fromEntries(PITCH_POSITIONS.map((p) => [p.id, null]));
