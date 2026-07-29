@@ -1,6 +1,21 @@
 import type { Player } from './auction';
 import type { Assignments, CaptaincyGrade, XIRatings } from './playingxi';
-import type  {PLAYERS } from './players';
+import { PLAYERS } from './players'; // FIXED: Removed 'type'
+
+// FIXED: Export PITCH_POSITIONS required by PlayingXI.tsx
+export const PITCH_POSITIONS = [
+  { id: '1', role: 'BAT', label: 'Opener 1' },
+  { id: '2', role: 'BAT', label: 'Opener 2' },
+  { id: '3', role: 'BAT', label: 'Top Order' },
+  { id: '4', role: 'BAT', label: 'Middle Order' },
+  { id: '5', role: 'BAT', label: 'Middle Order' },
+  { id: '6', role: 'AR', label: 'All-Rounder' },
+  { id: '7', role: 'WK', label: 'Wicketkeeper' },
+  { id: '8', role: 'BOWL', label: 'Bowler 1' },
+  { id: '9', role: 'BOWL', label: 'Bowler 2' },
+  { id: '10', role: 'BOWL', label: 'Bowler 3' },
+  { id: '11', role: 'BOWL', label: 'Bowler 4' },
+];
 
 function round1(n: number): number {
   return Math.round(n * 10) / 10;
