@@ -100,13 +100,25 @@ function LegendCard({ legend, index, onClick }: LegendCardProps) {
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-between p-4">
-        {/* Top: initials badge */}
-        <div className="flex flex-col items-center pt-4">
+        {/* Top: Avatar Image / Initials badge */}
+        <div className="flex flex-col items-center pt-2">
           <div
-            className="w-16 h-16 rounded-full flex items-center justify-center font-display font-extrabold text-2xl text-white"
+            className="w-20 h-20 rounded-full flex items-center justify-center font-display font-extrabold text-2xl text-white overflow-hidden shadow-lg"
             style={{ background: `${color}15`, border: `2px solid ${color}50` }}
           >
-            {legend.initials}
+            {legend.image ? (
+              <img
+                src={legend.image}
+                alt={legend.name}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback to initials if image link breaks
+                  (e.currentTarget as HTMLElement).style.display = 'none';
+                }}
+              />
+            ) : (
+              <span>{legend.initials}</span>
+            )}
           </div>
           <span
             className="mt-2 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider"

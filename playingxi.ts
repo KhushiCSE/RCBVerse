@@ -167,6 +167,18 @@ export function getRoleWarnings(
   return warnings;
 }
 
+// Replace getInitials with this updated version:
 export function getInitials(name: string): string {
-  return name.split(' ').map((w) => w[0]).slice(0, 2).join('');
+  if (!name) return '';
+  
+  // Special case for AB de Villiers -> ABD
+  if (name.toLowerCase().includes('villiers')) return 'ABD';
+  
+  // Ignore lowercase name particles like "de"
+  const words = name.split(/\s+/).filter((w) => w.length > 0 && w[0] === w[0].toUpperCase());
+  
+  if (words.length === 0) return name.slice(0, 2).toUpperCase();
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  
+  return (words[0][0] + words[words.length - 1][0]).toUpperCase();
 }
