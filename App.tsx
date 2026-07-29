@@ -1,19 +1,17 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { ModuleId } from '@/types/modules';
-import { Navbar } from '@/components/Navbar';
-import { Hero } from '@/components/Hero';
-import { AuctionSimulator } from '@/components/auction/AuctionSimulator';
-import { PlayingXI } from '@/components/playingxi/PlayingXI';
-import { StadiumExplorer } from '@/components/stadium/StadiumExplorer';
-import { Timeline } from '@/components/timeline/Timeline';
-import { LegendsGrid } from '@/components/legends/LegendsGrid';
-import { JerseyDesigner } from '@/components/jersey/JerseyDesigner';
-import { QuizArena } from '@/components/quiz/QuizArena';
-import { FanPassport } from '@/components/passport/FanPassport';
-import { FanProvider } from '@/lib/fanStore';
-import { AudioProvider } from '@/lib/audioStore';
-import { ModulePlaceholder } from '@/components/ModulePlaceholder';
+import { Navbar } from './Navbar';
+import { Hero } from './Hero';
+import { AuctionSimulator } from './AuctionSimulator';
+import { PlayingXI } from './PlayingXI';
+import { StadiumExplorer } from './StadiumExplorer';
+import { Timeline } from './Timeline';
+import { LegendsGrid } from './LegendsGrid';
+import { JerseyDesigner } from './JerseyDesigner';
+import { QuizArena } from './QuizArena';
+import { FanPassport } from './FanPassport';
+import { ModulePlaceholder } from './ModulePlaceholder';
 
 function App() {
   const [activeTab, setActiveTab] = useState<ModuleId>('home');
