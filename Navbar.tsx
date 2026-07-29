@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Volume2, VolumeX, Wind, Music, PartyPopper, Megaphone, Radio, X } from 'lucide-react';
 import type { ModuleId } from './modules';
-import type { NAV_MODULES } from './modules';
+import { NAV_MODULES } from './modules';
 import { useAudio } from './audioStore';
 
 interface NavbarProps {
