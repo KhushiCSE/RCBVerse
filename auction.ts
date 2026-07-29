@@ -1,5 +1,13 @@
 import type { PurchasedPlayer, SquadRatings } from './auction';
 
+// Added ROLE_CONFIG export required by PlayingXI.tsx and AuctionSimulator.tsx
+export const ROLE_CONFIG = {
+  BAT: { min: 3, max: 6, label: 'Batters' },
+  BOWL: { min: 3, max: 6, label: 'Bowlers' },
+  AR: { min: 1, max: 4, label: 'All-Rounders' },
+  WK: { min: 1, max: 3, label: 'Wicket Keepers' },
+};
+
 export function formatCr(amount: number): string {
   return `₹${amount.toFixed(2)} Cr`;
 }
