@@ -6,7 +6,7 @@ import type { ROLE_CONFIG } from './auction';
 import type { Assignments } from './playingxi';
 import type { PITCH_POSITIONS } from './playingxi';
 import type { getDefaultSquad, computeXIRatings, getCaptaincyGrade, getRoleWarnings } from './playingxi';
-import type { useAudio } from './audioStore';
+import { useAudio } from './audioStore';
 import type { CricketPitch } from './CricketPitch';
 import type { SquadList } from './SquadList';
 import type { RatingWidget, WarningsToast } from './RatingWidget';

@@ -5,7 +5,7 @@ import type { QUIZ_TIERS, BADGES } from './quiz';
 import type { QuizTier } from './quiz';
 import type { celebrateGold, celebrateBig, celebrateCorrect } from './confetti';
 import type { useFan } from './fanStore';
-import type { useAudio } from './audioStore';
+import { useAudio } from './audioStore';
 
 type Phase = 'select' | 'playing' | 'result';
 

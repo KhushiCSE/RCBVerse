@@ -9,7 +9,7 @@ import type { BudgetBar } from './BudgetBar';
 import type { PlayerCard } from './PlayerCard';
 import type { SquadDrawer } from './SquadDrawer';
 import type { AIRatingModal } from './AIRatingModal';
-import type { useAudio } from './audioStore';
+import { useAudio } from './audioStore';
 
 type Filter = 'all' | 'M' | 'W' | 'BAT' | 'BOWL' | 'AR' | 'WK';
 
