@@ -50,9 +50,23 @@ export function PlayerToken({
         border: `2px solid ${roleColor}80`,
       }}
     >
-      <span className="font-display font-bold text-white text-xs sm:text-sm">
-        {initials}
-      </span>
+      {/* Inner circle with image & clean initials fallback */}
+      <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center relative">
+        <span className="font-display font-bold text-white text-xs sm:text-sm absolute z-0">
+          {initials}
+        </span>
+        {player.image ? (
+          <img
+            src={player.image}
+            alt=""
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-top relative z-10"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).style.display = 'none';
+            }}
+          />
+        ) : null}
+      </div>
 
       {showRole && (
         <span
