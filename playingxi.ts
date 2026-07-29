@@ -1,8 +1,29 @@
-import { Player } from './auction';
-import { Assignments, CaptaincyGrade, XIRatings } from './playingxi';
-import { PLAYERS } from './players'; // FIXED: Removed 'type'
+import type { Player } from './auction';
+import { PLAYERS } from './players';
 
-// FIXED: Export PITCH_POSITIONS required by PlayingXI.tsx
+// Types & Interfaces
+export type CaptaincyGrade =
+  | 'No Captain'
+  | 'Rookie Captain'
+  | 'Steady Captain'
+  | 'Aggressive Leader'
+  | 'Tactical Mastermind';
+
+export interface XIRatings {
+  batting: number;
+  bowling: number;
+  fielding: number;
+  overall: number;
+}
+
+export type Assignments = Record<string, Player | null>;
+
+export interface RoleWarning {
+  type: 'wk' | 'captain' | 'bowlers' | 'openers';
+  message: string;
+}
+
+// Pitch & Position Constants
 export const PITCH_POSITIONS = [
   { id: '1', role: 'BAT', label: 'Opener 1' },
   { id: '2', role: 'BAT', label: 'Opener 2' },
@@ -17,6 +38,14 @@ export const PITCH_POSITIONS = [
   { id: '11', role: 'BOWL', label: 'Bowler 4' },
 ];
 
+export const POSITION_GROUP_META = {
+  BAT: { label: 'Batters', title: 'Top & Middle Order', color: 'emerald' },
+  WK: { label: 'Wicketkeeper', title: 'Wicketkeeper', color: 'blue' },
+  AR: { label: 'All-Rounders', title: 'All-Rounders', color: 'amber' },
+  BOWL: { label: 'Bowlers', title: 'Bowling Attack', color: 'rose' },
+};
+
+// Helper Functions
 function round1(n: number): number {
   return Math.round(n * 10) / 10;
 }
@@ -89,11 +118,6 @@ export function getCaptaincyGrade(
   if (captain.role === 'BAT' && captain.batting >= 9) return 'Aggressive Leader';
   if (captain.batting >= 8) return 'Steady Captain';
   return 'Rookie Captain';
-}
-
-export interface RoleWarning {
-  type: 'wk' | 'captain' | 'bowlers' | 'openers';
-  message: string;
 }
 
 export function getRoleWarnings(
