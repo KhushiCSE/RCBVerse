@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { FanProvider } from './fanStore';
 import type { ModuleId } from './modules';
 import type { Navbar } from './Navbar';
 import type { Hero } from './Hero';
