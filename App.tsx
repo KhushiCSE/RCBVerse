@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { AudioProvider } from './soundEngine';
+import { AudioProvider } from './audioStore';
 import { FanProvider } from './fanStore';
 import type { ModuleId } from './modules';
 import { Navbar } from './Navbar';
