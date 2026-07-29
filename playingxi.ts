@@ -38,12 +38,26 @@ export const PITCH_POSITIONS = [
   { id: '11', role: 'BOWL', label: 'Bowler 4' },
 ];
 
-export const POSITION_GROUP_META = {
+const basePositionMeta: Record<string, { label: string; title: string; color: string }> = {
   BAT: { label: 'Batters', title: 'Top & Middle Order', color: 'emerald' },
+  bat: { label: 'Batters', title: 'Top & Middle Order', color: 'emerald' },
   WK: { label: 'Wicketkeeper', title: 'Wicketkeeper', color: 'blue' },
+  wk: { label: 'Wicketkeeper', title: 'Wicketkeeper', color: 'blue' },
   AR: { label: 'All-Rounders', title: 'All-Rounders', color: 'amber' },
+  ar: { label: 'All-Rounders', title: 'All-Rounders', color: 'amber' },
   BOWL: { label: 'Bowlers', title: 'Bowling Attack', color: 'rose' },
+  bowl: { label: 'Bowlers', title: 'Bowling Attack', color: 'rose' },
 };
+
+const defaultMeta = { label: 'Players', title: 'Squad', color: 'indigo' };
+
+// Safe Proxy so accessing missing keys never returns undefined
+export const POSITION_GROUP_META = new Proxy(basePositionMeta, {
+  get(target, prop: string) {
+    if (typeof prop !== 'string') return defaultMeta;
+    return target[prop] || target[prop.toUpperCase()] || defaultMeta;
+  },
+});
 
 // Helper Functions
 function round1(n: number): number {
@@ -92,7 +106,7 @@ export function computeXIRatings(assignments: Assignments): XIRatings {
     ? bowlPlayers.reduce((s, p) => s + p.bowling, 0) / bowlPlayers.length
     : Math.min(fallbackBowl, 4);
 
-  const fielding = players.reduce((s, p) => s + p.fielding, 0) / players.length;
+  const fielding = players.reduce((s, p) => s + (p.fielding ?? 7), 0) / players.length;
 
   const overall = (batting * 0.35 + bowling * 0.35 + fielding * 0.30);
 
