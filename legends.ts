@@ -162,7 +162,7 @@ export const LEGENDS: Legend[] = [
     role: 'Opening Batter',
     category: 'women',
     initials: 'SM',
-    image: 'https://www.royalchallengers.com/PRRCB01/public/2025-02/smriti%20mandhana%20(1).png',
+    image: 'https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2023/03/04/958674167e5b1967aa01d7ae2f7a12f4.jpg?fit=1978%2C1500&quality=80&zoom=1&ssl=1%3Fv%3D1677933278&is-pending-load=1',
     accent: 'red',
     tagline: 'The Captain Elegant',
     bio: "RCB's WPL captain and India's batting superstar. A graceful left-hander who combines elegance with explosive power. Led Royal Challengers Bengaluru to their first WPL title.",
