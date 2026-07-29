@@ -362,3 +362,7 @@ export class SoundEngine {
 }
 
 export const soundEngine = new SoundEngine();
+
+export function AudioProvider({ children }: { children: any }) {
+  return children;
+}
